@@ -1,0 +1,25 @@
+header{
+  background-color:#BE64E6;
+  text-align: left;
+  padding: 10px;
+  max-width: 100%;
+  color: white;
+  font-size: 18px;
+}
+.navbar{
+  background-color: #632C7A;
+}
+a{
+  padding: 0px 30px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: #a41d35;
+  background-color: yellow;
+}
+a.active{
+  color: yellow;
+  background-color: #a41d35;
+}

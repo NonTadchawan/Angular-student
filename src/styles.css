@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0;
+}
+table{
+  margin: 10px 10px;
+  width: 95%;
+}
+table,th,td{
+  border: 2px solid ;
+  border-collapse: collapse;
+}
+th{
+  text-align: center;
+}

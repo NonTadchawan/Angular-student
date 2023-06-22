@@ -1,0 +1,24 @@
+form{
+  padding: 0px 20px;
+}
+div{
+  margin-top: 10px;
+  background-color: rgba(233, 190, 252, 0.81);
+  padding: 5px 0px 50px 0px;
+  border-radius: 5px;
+  width: 100%;
+}
+input[type="text"],select{
+  width:100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+button {
+  width: 10%;
+  padding: 5px;
+  color: white;
+  background-color: #632C7A;
+  border-radius: 5px;
+  float: right;
+}

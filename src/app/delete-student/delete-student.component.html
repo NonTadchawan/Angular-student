@@ -1,0 +1,11 @@
+<div>
+  <form (click)="deleteStudent()">
+  <label for="id">Id</label><br>
+  <input disabled id="id"  name="id" value="{{id}}"><br>
+  <label for="name">Name</label><br>
+  <input disabled id="name" name="name" value="{{student.name}}"><br>
+  <label for="faculty">Faculty</label><br>
+  <input disabled id="faculty" name="faculty" value="{{student.faculty.name}}" ><br><br>
+  <button type="submit" >Conform delete</button>
+  </form>
+</div>

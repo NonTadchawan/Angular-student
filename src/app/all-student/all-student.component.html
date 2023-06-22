@@ -1,0 +1,52 @@
+<div>
+  <label for="id">Find student by Id : </label>
+  <input id="id" type="text" [(ngModel)]="id" placeholder="Enter id">
+  <button type="button" (click)="findStudent()">Search</button>
+  <button type="button" (click)="findAllStudent()">All Student</button>
+</div>
+<div style="margin-top: 20px" *ngIf="students" >
+  <h2>All students</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Faculty</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of students">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.faculty.name}}</td>
+      <td [routerLink]="[item.id,'update_student']" [relativeTo]="activatedRouter" class="edit"><a>edit</a></td>
+      <td [routerLink]="[item.id,'delete_student']" [relativeTo]="activatedRouter" class="edit"><a>delete</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="student">
+  <table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Faculty</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.faculty.name}}</td>
+      <td [routerLink]="[student.id,'update_student']" [relativeTo]="activatedRouter" class="edit"><a>edit</a></td>
+      <td [routerLink]="[student.id,'delete_student']" [relativeTo]="activatedRouter" class="edit"><a>delete</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

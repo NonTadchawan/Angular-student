@@ -1,0 +1,27 @@
+<div>
+
+  <label for="id">Find student by Id :  </label>
+    <input type="text" id="id" [(ngModel)]="id" placeholder="Enter your id">
+    <button type="submit" (click)="findStudent()">submit</button>
+
+</div>
+<div class="table_student">
+  <table *ngIf="student">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Faculty</th>
+      <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.faculty.name}}</td>
+      <td><a (click)="edit(student)" >edit</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

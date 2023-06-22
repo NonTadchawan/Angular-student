@@ -1,0 +1,13 @@
+<div>
+    <label for="id">Id</label><br>
+    <input disabled id="id" value="{{student.id}}" name="id"><br>
+    <label for="name">Name</label><br>
+    <input id="name" name="name"  [(ngModel)]="student.name"><br>
+    <label for="faculty">Faculty</label><br>
+    <select id="faculty" name="faculty" [(ngModel)]="student.faculty.id">
+      <option [ngValue]="undefined">--- please select ---</option>
+      <option *ngFor="let faculty of faculties" [ngValue]="faculty.id">{{faculty.name}}</option>
+    </select><br><br>
+    <button type="button" (click)="edit()">update</button>
+</div>
+

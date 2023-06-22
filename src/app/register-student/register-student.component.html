@@ -1,0 +1,17 @@
+<div class="center">
+  <form (reset)="reset()" (ngSubmit)="registerStudent()" >
+    <legend><h3>Register student</h3></legend>
+    <label for="id">ID</label>
+    <br>
+    <input type="text" id="id"  name="id" [(ngModel)]="student.id" ><br>
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" [(ngModel)]="student.name" ><br>
+    <label for="faculty">Faculty</label><br>
+    <select id="faculty" name="faculty" [(ngModel)]="student.faculty.id">
+      <option [ngValue]="undefined">--- please select ---</option>
+      <option *ngFor="let faculty of faculties" [ngValue]="faculty.id">{{faculty.name}}</option>
+    </select><br><br>
+    <button type="submit" >send data</button>
+    <button type="reset">reset</button>
+  </form>
+</div>
